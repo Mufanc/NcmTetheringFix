@@ -1,8 +1,10 @@
 # NCM Tethering Fix
 
-Keeps Android's USB NCM interface in Ethernet server mode so macOS can use native CDC-NCM tethering.
+Android USB tethering commonly uses RNDIS, which macOS does not support natively. This module switches USB tethering to CDC-NCM and keeps the interface in Ethernet server mode so macOS can use it without an additional driver.
 
-Tested on PJZ110 running Android 16. The helper talks directly to `IEthernetManager`; transaction numbers may differ on other Android releases.
+Tested on PJZ110 running Android 16. The helper talks directly to the hidden `IEthernetManager` API.
+
+This may work without root, but I haven't tested it—who knows?
 
 ## Build
 
