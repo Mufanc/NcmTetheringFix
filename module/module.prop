@@ -1,0 +1,6 @@
+id=ncm-tethering-fix
+name=NCM Ethernet Fix
+version=v1.0.0
+versionCode=1
+author=Mufanc
+description=Uses NCM for USB tethering and holds its interface in Ethernet server mode
